@@ -1,0 +1,11 @@
+body {
+   /* background-color: #F2F2F2; */
+ }
+ 
+ .alert {
+   margin-top: 10px;
+ }
+ 
+ .delete-form {
+   display: inline;
+ } 

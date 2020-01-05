@@ -1,0 +1,53 @@
+<%- include("partials/header") %>
+
+<nav class="navbar navbar-expand navbar-dark fixed-top">
+   <div class="container">
+     <div class="navbar-brand float-none">FCC - User Dashboard</div>
+     <div class="navbar-nav">
+       <a class="nav-item nav-link" href="/"><span class="icon icon-chevron-with-circle-left"></span></a>
+       <a class="nav-item nav-link" href="/logout"><span class="icon icon-circle-with-cross"></span></a>
+     </div>
+   </div>
+   </div>
+ </nav>
+ 
+ <div class="container">
+   <div id="accordion" role="tablist">
+     <div class="card bg-inverse">
+       <a class="" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         <div class="card-header bg-inverse" role="tab" id="headingOne">
+           <h5 class="mb-0">
+             Your Profile
+           </h5>
+         </div>
+       </a>
+ 
+       <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+         <div class="card-body">
+           <p><a href="/user/edit">Edit your profile?</a></p>
+           <p><span class="user-strong">Full Name:</span> <%= user.fullname %></p>
+           <p><span class="user-strong">Email:</span> <%= user.username %></p>
+           <p><span class="user-strong">Phone:</span> <%= user.phone %></p>
+           <p><a href="/user/reset">Change your password?</a></p>
+         </div>
+       </div>
+     </div>
+     <!-- <div class="card bg-inverse">
+       <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+         <div class="card-header bg-inverse" role="tab" id="headingTwo">
+           <h5 class="mb-0">
+             Announcements
+           </h5>
+         </div>
+       </a>
+ 
+       <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+         <div class="card-body">
+           <h1>ANNOUNCEMENTS GO HERE</h1>
+         </div>
+       </div>
+     </div> -->
+   </div>
+ </div> <!-- </container> -->
+
+<%- include("partials/footer") %>

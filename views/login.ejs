@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+
+<nav class="navbar navbar-expand navbar-dark fixed-top">
+   <div class="container">
+     <div class="navbar-brand float-none">FCC</div>
+     <div class="navbar-nav">
+       <a class="nav-item nav-link" href="/"><span class="icon icon-chevron-with-circle-left"></span></a>
+     </div>
+   </div>
+   </div>
+ </nav>
+ 
+ <div class="container">
+   <div class="row">
+     <div style="width: 45%; margin: 15px auto;">
+       <form action="/login" method="POST">
+         <div class="form-group">
+           <input class="form-control" type="text" name="username" placeholder="email address">
+         </div>
+         <div class="form-group">
+           <input class="form-control" type="password" name="password" placeholder="password">
+         </div>
+         <div class="form-group">
+           <button class="btn btn-lg btn-primary btn-block">Login!</button>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
+
+<%- include("partials/footer") %>

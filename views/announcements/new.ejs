@@ -1,0 +1,33 @@
+<%- include("partials/header") %>
+
+<div class='container'>
+   <h1 style='text-align: center'>Create A New Announcement</h1>
+   <div class='row'>
+ 
+     <div style='width: 45%; margin: 15px auto;'>
+     <form action='/announcements' method='POST'>
+       <div class='form-group'>
+         <label>Title</label>
+         <input class='form-control' type='text' name='announcement[title]' placeholder='title'>
+       </div>
+       <div class='form-group'>
+         <label>Image URL (optional)</label>
+         <input class='form-control' type='text' name='announcement[image]' placeholder='image url'>
+       </div>
+       <div class='form-group'>
+         <label>Announcement Text</label>
+         <textarea class='form-control' name='announcement[description]'></textarea>
+       </div>
+       <div class='form-group'>
+         <button class='btn btn-lg btn-primary btn-block'>Submit!</button>
+       </div>
+     </form>
+     <a href='/admin/announcements'>Go Back</a>
+   </div>
+ 
+   </div>
+ 
+ </div>
+
+
+<%- include("partials/footer") %>

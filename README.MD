@@ -1,0 +1,1 @@
+This is an app intended for presentation of church announcements through a mobile-first website.

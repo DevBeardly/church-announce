@@ -1,0 +1,55 @@
+@media screen and (max-width: 767px) {
+   .container {
+     padding:0
+   }
+   #accordion {
+     margin-top: 45px;
+   }
+ }
+ .navbar {
+   background-color:#008259;
+   text-align:center;
+ }
+ .navbar-brand {
+   font-family: 'Amatic SC', serif;
+   margin-left:auto;
+   margin-right:auto;
+   text-align:center;
+ }
+ .card {
+   border-radius:0;
+ }
+ h5 {
+   font-family: 'Amatic SC', cursive;
+   font-size: 3em;
+ }
+ a, a:visited, a:hover, a:active {
+   text-decoration:none;
+ }
+ .announce-banner {
+   width:100%;
+   margin-bottom:10px;
+ }
+ .announce-banner > img {
+   width:100%;
+   margin:0;
+ }
+ .announce-cta {
+   margin-bottom:10px;
+ }
+ .pull-right {
+   float:right !important;
+   margin:15px 0 15px 15px;
+ }
+ 
+ .alert {
+   margin-top: 10px;
+ }
+ 
+ textarea {
+   height: 12em;
+ }
+ 
+ .user-strong {
+   font-weight: bold;
+ }
