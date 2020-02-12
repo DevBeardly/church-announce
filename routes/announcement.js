@@ -124,7 +124,7 @@ router.get('/:id/publish', middleware.isEditor, (req, res) => {
 });
 
 // UNPUBLISH
-router.get('/:id/unpublish', middleware.isEditor, (err, announcement) => {
+router.get('/:id/unpublish', middleware.isEditor, (req, res) => {
    Announcement.findById(req.params.id, (err, announcement) => {
       if (err) {
          req.flash('error', 'Could not find that announcement.');
