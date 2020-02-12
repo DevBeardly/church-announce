@@ -23,7 +23,7 @@ router.get('/register', (req, res) => {
 
 // handle signup logic
 router.post('/register', (req, res) => {
-   const newUser = new User({ username = req.body.username, fullname: req.body.fullname, isMember: true, isEditor: true, isAdmin: true });
+   const newUser = new User({ username: req.body.username, fullname: req.body.fullname, isMember: true, isEditor: true, isAdmin: true });
    User.register(newUser, req.body.password, (err, user) => {
       if (err) {
          req.flash('error', err.message);
