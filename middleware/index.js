@@ -26,7 +26,7 @@ middlewareObj.isAdmin = (req, res, next) => {
    res.redirect('/login');
 };
 
-middlewareObj.isEditor = (req,res,next) {
+middlewareObj.isEditor = (req,res,next) => {
    if (req.isAuthenticated()) {
       if (req.user.isEditor || req.user.isAdmin) {
          return next();
