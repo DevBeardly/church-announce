@@ -19,6 +19,25 @@
  .card {
    border-radius:0;
  }
+ .collapse {
+   border-bottom: 4px solid;
+ }
+ #collapseOne {
+   background-color: blue;
+   border-color: red;
+ }
+ #collapseTwo {
+   background-color: blue;
+   border-color: red;
+ }
+ #collapseThree {
+   background-color: blue;
+   border-color: red;
+ }
+ #collapseFour {
+  background-color: blue;
+  border-color: red;
+}
  h5 {
    font-family: 'Amatic SC', cursive;
    font-size: 3em;
