@@ -22,19 +22,19 @@
  .collapse {
    border-bottom: 4px solid;
  }
- #collapseOne {
+ #collapseOne .card {
    background-color: blue;
    border-color: red;
  }
- #collapseTwo {
+ #collapseTwo .card {
    background-color: blue;
    border-color: red;
  }
- #collapseThree {
+ #collapseThree .card {
    background-color: blue;
    border-color: red;
  }
- #collapseFour {
+ #collapseFour .card {
   background-color: blue;
   border-color: red;
 }
