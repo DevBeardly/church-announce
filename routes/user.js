@@ -112,12 +112,12 @@ router.get('/reset', middleware.isLoggedIn, (req, res) => {
 router.post('/reset', middleware.isLoggedIn, (req, res) => {
    User.findById(req.user._id, (err, user) => {
       if (err) {
-         req.flash('error', 'Something went wrong with the databse. Try again later.');
+         req.flash('error', 'Something went wrong with the database. Try again later.');
          res.redirect('/user');
       } else {
          user.setPassword(req.body.password, (err) => {
             if (err) {
-               req.flash('error', 'Something went wrong with the databse. Try again later.');
+               req.flash('error', 'Something went wrong with the database. Try again later.');
                res.redirect('/user');
             } else {
                user.save();
