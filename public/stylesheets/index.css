@@ -22,19 +22,19 @@
  .collapse {
    border-bottom: 4px solid;
  }
- #collapseOneLink {
+ #collapseOneLink .bg-inverse {
    background-color: blue !important;
    border-color: red !important;
  }
- #collapseTwoLink {
+ #collapseTwoLink .bg-inverse {
   background-color: blue !important;
   border-color: red !important;
  }
- #collapseThreeLink {
+ #collapseThreeLink .bg-inverse {
   background-color: blue !important;
   border-color: red !important;
  }
- #collapseFourLink {
+ #collapseFourLink .bg-inverse {
   background-color: blue !important;
    border-color: red !important;
 }
