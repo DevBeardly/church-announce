@@ -23,20 +23,20 @@
    border-bottom: 4px solid;
  }
  #collapseOneLink {
-   background-color: blue;
-   border-color: red;
+   background-color: blue !important;
+   border-color: red !important;
  }
  #collapseTwoLink {
-   background-color: blue;
-   border-color: red;
+  background-color: blue !important;
+  border-color: red !important;
  }
  #collapseThreeLink {
-   background-color: blue;
-   border-color: red;
+  background-color: blue !important;
+  border-color: red !important;
  }
  #collapseFourLink {
-  background-color: blue;
-  border-color: red;
+  background-color: blue !important;
+   border-color: red !important;
 }
  h5 {
    font-family: 'Amatic SC', cursive;
