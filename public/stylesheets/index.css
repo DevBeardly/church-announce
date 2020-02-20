@@ -18,6 +18,7 @@
  }
  .card {
    border-radius:0;
+   border: none !important;
  }
  .card-header {
    border-radius: 0 !important;
