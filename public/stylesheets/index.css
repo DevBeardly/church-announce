@@ -16,6 +16,9 @@
    margin-right:auto;
    text-align:center;
  }
+ a, a:focus, a:hover {
+   text-decoration: none !important;
+ }
  .card {
    border-radius:0;
    border: none !important;
