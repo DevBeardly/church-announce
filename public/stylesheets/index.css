@@ -20,6 +20,7 @@
    border-radius:0;
  }
  .card-header {
+   border-radius: 0 !important;
    border-bottom: 4px solid;
  }
  #headingOne {
