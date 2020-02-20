@@ -22,7 +22,7 @@
  .collapse {
    border-bottom: 4px solid;
  }
- #collapseOneLink .card-header .bg-inverse {
+ #headingOne {
    background-color: blue !important;
    border-color: red !important;
  }
