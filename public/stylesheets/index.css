@@ -23,20 +23,20 @@
    border-bottom: 4px solid;
  }
  #headingOne {
-   background-color: blue !important;
-   border-color: red !important;
+   background-color: #0091c9 !important;
+   border-color: #0077a5 !important;
  }
  #headingTwo {
-  background-color: blue !important;
-  border-color: red !important;
+  background-color: #eb0045 !important;
+  border-color: #d2003e !important;
  }
  #headingThree {
-  background-color: blue !important;
-  border-color: red !important;
+  background-color: #3cb29c !important;
+  border-color: #369f8b !important;
  }
  #headingFour {
-  background-color: blue !important;
-   border-color: red !important;
+  background-color: #805475 !important;
+   border-color: #6a4661 !important;
 }
  h5 {
    font-family: 'Amatic SC', cursive;
