@@ -13,6 +13,7 @@ router.get('/new', middleware.isLoggedIn, (req, res) => {
 
 // CREATE - add new group to DB
 router.post('/', middleware.isLoggedIn, (req, res) => {
+   req.body.group.name = req.sanitize(req.body.group.name);
    req.body.group.description = req.sanitize(req.body.group.description);
    Group.create(req.body.group, (err, group) => {
       if (err) {
@@ -25,7 +26,7 @@ router.post('/', middleware.isLoggedIn, (req, res) => {
          group.save();
 
          req.flash('success', 'Your group was successfully created!');
-         res.redirect('/admin');
+         res.redirect('/admin/groups');
       }
    });
 });
