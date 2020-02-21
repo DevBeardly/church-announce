@@ -49,5 +49,6 @@ app.use(indexRoutes);
 app.use('/admin', adminRoutes);
 app.use('/user', userRoutes);
 app.use('/announcements', announcementRoutes);
+app.use('/groups', groupRoutes);
 
 app.listen(process.env.PORT);
