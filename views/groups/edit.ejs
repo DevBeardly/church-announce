@@ -5,7 +5,7 @@
   <div class='row'>
 
     <div style='width: 45%; margin: 15px auto;'>
-    <form action='/announcements/<%= announcement._id %>?_method=PUT' method='POST'>
+    <form action='/groups/<%= group._id %>?_method=PUT' method='POST'>
       <div class='form-group'>
         <label>Group Name</label>
         <input class='form-control' type='text' name='group[name]' value='<%= group.name %>'>

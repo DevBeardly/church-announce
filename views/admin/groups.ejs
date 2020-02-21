@@ -26,7 +26,7 @@
                <a class="nav-link " href="../admin">Overview</a>
              </li> -->
              <li class="nav-item">
-               <a class="nav-link " href="../admin/announcements">Announcements</a>
+               <a class="nav-link " href="../admin/groups">groups</a>
              </li>
              <li class="nav-item">
                <a class="nav-link active"href="../admin/groups">Groups</a>
@@ -123,6 +123,74 @@
  </table>
  </div>
  
+ <div class="table-responsive">
+  <table class="table" data-sort="table">
+    <thead>
+      <tr>
+        <!-- <th><input type="checkbox" class="select-all" id="selectAll"></th> -->
+        <th>Title</th>
+        <th>Author</th>
+        <th>Date Updated</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% groups.forEach(function(group){ %>
+      <tr>
+        <!-- <td><input type="checkbox" class="select-row"></td> -->
+        <td><%= group.title %></td>
+        <td><%= group.author.fullname %></td>
+          <% var year = group.dateUpdated.getFullYear().toString() %>
+          <% var date = (group.dateUpdated.getMonth() + 1) + '/' + group.dateUpdated.getDate() + '/' + year.substring(2,4) %>
+        <td><%= date %></td>
+        <!-- <td><%= group.dateUpdated.toDateString() %></td> -->
+        <td>
+          <div class="btn-group">
+            <a href="../groups/<%= group._id %>/edit">
+              <button type="button" class="btn btn-outline-primary edit-button">
+                <span class="icon icon-pencil"></span>
+              </button>
+            </a>
+            
+            <% if (group.isApproved) { %>
+              <a href="../groups/<%= group._id %>/unapprove">
+                <button type="button" class="btn btn-outline-primary center-button">
+                  <span class="icon icon-block"></span>
+                </button>
+              </a>
+            <% } else { %>
+              <a href="../groups/<%= group._id %>/approve">
+                <button type="button" class="btn btn-outline-primary center-button">
+                  <span class="icon icon-check"></span>
+                </button>
+              </a>
+            <% } %>
+            <% if (group.isPublished) { %>
+              <a href="../groups/<%= group._id %>/unpublish">
+                <button type="button" class="btn btn-outline-primary center-button">
+                  <span class="icon icon-controller-paus"></span>
+                </button>
+              </a>
+            <% } else { %>
+              <a href="../groups/<%= group._id %>/publish">
+                <button type="button" class="btn btn-outline-primary center-button">
+                  <span class="icon icon-controller-play"></span>
+                </button>
+              </a>
+            <% } %>
+            <form action="/groups/<%= group._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="btn btn-outline-primary delete-button">
+                <span class="icon icon-erase"></span>
+              </button>
+            </form>
+          </div>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  </div>
+
  <!-- <div class="text-center">
  <nav>
    <ul class="pagination">
