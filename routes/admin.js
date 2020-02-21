@@ -28,7 +28,7 @@ router.get('/groups', middleware.isEditor, (req, res) => {
       if (err) {
          console.log(err);
       } else {
-         res.render('/admin/groups', { groups: allGroups });
+         res.render('admin/groups', { groups: allGroups });
       }
    })
 });
