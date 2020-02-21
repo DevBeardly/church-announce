@@ -7,13 +7,16 @@ const express          = require('express'),
       LocalStrategy    = require('passport-local'),
       methodOverride   = require('method-override'),
       User             = require('./models/user'),
-      Announcement     = require('./models/announcement');
+      Announcement     = require('./models/announcement'),
+      Group            = require('./models/group');
 
 // REQUIRING ROUTES
 const indexRoutes        = require('./routes/index'),
       adminRoutes        = require('./routes/admin'),
       userRoutes         = require('./routes/user'),
-      announcementRoutes = require('./routes/announcement');
+      announcementRoutes = require('./routes/announcement'),
+      groupRoutes        = require('./routes/group'),
+      connectRoutes      = require('./routes/connect');
 
 mongoose.connect(process.env.DBURL);
 app.use(express.urlencoded({ extended: true }));

@@ -1,0 +1,33 @@
+<%- include("../partials/header") %>
+
+<div class='container'>
+   <h1 style='text-align: center'>Create A New Group</h1>
+   <div class='row'>
+ 
+     <div style='width: 45%; margin: 15px auto;'>
+     <form action='/groups' method='POST'>
+       <div class='form-group'>
+         <label>Group Name</label>
+         <input class='form-control' type='text' name='group[title]' placeholder='title'>
+       </div>
+       <div class='form-group'>
+         <label>Image URL (optional)</label>
+         <input class='form-control' type='text' name='group[image]' placeholder='image url'>
+       </div>
+       <div class='form-group'>
+         <label>Group Description Text</label>
+         <textarea class='form-control' name='group[description]'></textarea>
+       </div>
+       <div class='form-group'>
+         <button class='btn btn-lg btn-primary btn-block'>Submit!</button>
+       </div>
+     </form>
+     <a href='/admin/groups'>Go Back</a>
+   </div>
+ 
+   </div>
+ 
+ </div>
+
+
+<%- include("../partials/footer") %>
