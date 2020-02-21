@@ -3,6 +3,7 @@ const express      = require('express'),
       passport     = require('passport'),
       User         = require('../models/user'),
       Announcement = require('../models/announcement'),
+      Group        = require('../models/group'),
       middleware   = require('../middleware');
 
 // LANDING PAGE
