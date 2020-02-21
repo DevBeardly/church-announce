@@ -60,7 +60,7 @@ router.put('/edit/:id', middleware.isLoggedIn, (req, res) => {
          res.redirect('back');
       } else {
          req.flash('success', 'Successfully updated your profile!');
-         res.redirect('back');
+         res.redirect('/user');
       }
    });
 });
@@ -85,7 +85,7 @@ router.put('/:id', middleware.isLoggedIn, (req, res) => {
          res.redirect('back');
       } else {
          req.flash('success', 'Successfully updated that user!');
-         res.redirect('admin/users');
+         res.redirect('back');
       }
    });
 });
