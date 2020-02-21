@@ -60,7 +60,7 @@ router.put('/edit/:id', middleware.isLoggedIn, (req, res) => {
          res.redirect('back');
       } else {
          req.flash('success', 'Successfully updated your profile!');
-         res.redirect('/user');
+         res.redirect('back');
       }
    });
 });
