@@ -97,39 +97,12 @@
  </div> -->
  
  <div class="table-responsive">
- <table class="table" data-sort="table">
-   <thead>
-     <tr>
-       <th><input type="checkbox" class="select-all" id="selectAll"></th>
-       <th>ID</th>
-       <th>Name</th>
-       <th>Description</th>
-       <th>Date Updated</th>
-       <th>Author</th>
-     </tr>
-   </thead>
-   <tbody>
-     <% groups.forEach(function(group){ %>
-     <tr>
-       <td><input type="checkbox" class="select-row"></td>
-       <td><a href="#"><%= group._id %></a></td>
-       <td><%= group.title %></td>
-       <td><%= group.description %></td>
-       <td><%= group.dateUpdated %></td>
-       <td><%= group.author.fullname %></td>
-     </tr>
-     <% }); %>
-   </tbody>
- </table>
- </div>
- 
- <div class="table-responsive">
   <table class="table" data-sort="table">
     <thead>
       <tr>
         <!-- <th><input type="checkbox" class="select-all" id="selectAll"></th> -->
-        <th>Title</th>
-        <th>Author</th>
+        <th>Name</th>
+        <th>Description</th>
         <th>Date Updated</th>
         <th>Actions</th>
       </tr>
@@ -138,8 +111,8 @@
       <% groups.forEach(function(group){ %>
       <tr>
         <!-- <td><input type="checkbox" class="select-row"></td> -->
-        <td><%= group.title %></td>
-        <td><%= group.author.fullname %></td>
+        <td><%= group.name %></td>
+        <td><%= group.description %></td>
           <% var year = group.dateUpdated.getFullYear().toString() %>
           <% var date = (group.dateUpdated.getMonth() + 1) + '/' + group.dateUpdated.getDate() + '/' + year.substring(2,4) %>
         <td><%= date %></td>
