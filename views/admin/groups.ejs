@@ -92,7 +92,7 @@
      <tr>
        <th><input type="checkbox" class="select-all" id="selectAll"></th>
        <th>ID</th>
-       <th>Title</th>
+       <th>Name</th>
        <th>Description</th>
        <th>Date Updated</th>
        <th>Author</th>
@@ -102,11 +102,11 @@
      <% announcements.forEach(function(announcement){ %>
      <tr>
        <td><input type="checkbox" class="select-row"></td>
-       <td><a href="#"><%= announcement._id %></a></td>
-       <td><%= announcement.title %></td>
-       <td><%= announcement.description %></td>
-       <td><%= announcement.dateUpdated %></td>
-       <td><%= announcement.author.fullname %></td>
+       <td><a href="#"><%= group._id %></a></td>
+       <td><%= group.title %></td>
+       <td><%= group.description %></td>
+       <td><%= group.dateUpdated %></td>
+       <td><%= group.author.fullname %></td>
      </tr>
      <% }); %>
    </tbody>
