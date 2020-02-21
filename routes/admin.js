@@ -23,7 +23,13 @@ router.get('/announcements', middleware.isEditor, (req, res) => {
 
 // ADMIN GROUPS PANEL
 router.get('/groups', middleware.isEditor, (req, res) => {
-   res.redirect('/admin/announcements');
+   Group.find({}, (err, allGroups) => {
+      if (err) {
+         console.log(err);
+      } else {
+         res.render('/admin/groups', { groups: allGroups });
+      }
+   })
 });
 
 // ADMIN CONNECT PANEL
