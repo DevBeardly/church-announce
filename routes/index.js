@@ -11,8 +11,14 @@ router.get('/', (req, res) => {
       if (err) {
          console.log(err);
       } else {
-         res.render('index', { announcements: allAnnouncements });
-      }
+         Group.find({}, (err, allGroups) => {
+            if (err) {
+               console.log(err);
+            } else {      
+               res.render('index', { announcements: allAnnouncements });
+            };
+         });
+      };
    });
 });
 
