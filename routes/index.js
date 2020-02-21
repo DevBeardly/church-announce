@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
             if (err) {
                console.log(err);
             } else {      
-               res.render('index', { announcements: allAnnouncements });
+               res.render('index', { announcements: allAnnouncements, groups: allGroups });
             };
          });
       };
