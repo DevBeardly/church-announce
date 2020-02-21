@@ -15,8 +15,8 @@ const indexRoutes        = require('./routes/index'),
       adminRoutes        = require('./routes/admin'),
       userRoutes         = require('./routes/user'),
       announcementRoutes = require('./routes/announcement'),
-      groupRoutes        = require('./routes/group'),
-      connectRoutes      = require('./routes/connect');
+      groupRoutes        = require('./routes/group');
+      // connectRoutes      = require('./routes/connect'); -- NOT YET IMPLEMENTED
 
 mongoose.connect(process.env.DBURL);
 app.use(express.urlencoded({ extended: true }));
