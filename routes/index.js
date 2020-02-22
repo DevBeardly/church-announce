@@ -67,4 +67,10 @@ router.get('/logout', (req, res) => {
    res.redirect('/');
 });
 
+// Contact Form success route
+router.get('/contact-success', (req, res) => {
+   req.flash('success', 'Thanks for your time, you should hear back from us soon!');
+   res.redirect('/');
+});
+
 module.exports = router;
