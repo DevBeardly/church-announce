@@ -5,6 +5,9 @@
      <div class="navbar-brand float-none">FCC - User Dashboard</div>
      <div class="navbar-nav">
        <a class="nav-item nav-link" href="/"><span class="icon icon-chevron-with-circle-left"></span></a>
+       <% if ( user.isAdmin || user.isEditor ) { %>
+        <a class="nav-item nav-link" href="/admin"><span class="icon icon-tools"></span></a>
+       <% } %>
        <a class="nav-item nav-link" href="/logout"><span class="icon icon-circle-with-cross"></span></a>
      </div>
    </div>
