@@ -17,7 +17,7 @@
  <div class="container">
    <div id="accordion" role="tablist">
      <div class="card bg-inverse">
-       <a class="collapsed" data-toggle="collapse" href="#sermonsTab" aria-expanded="true" aria-controls="collapseOne">
+       <a class="collapsed" data-toggle="collapse" href="#sermonsTab" aria-expanded="true" aria-controls="sermonsTab">
          <div class="card-header bg-inverse" role="tab" id="sermonsHeading">
            <h5 class="mb-0">
              Latest Messages
@@ -25,14 +25,14 @@
          </div>
        </a>
  
-       <div id="sermonsTab" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+       <div id="sermonsTab" class="collapse" role="tabpanel" aria-labelledby="sermonsHeading" data-parent="#accordion">
          <div class="card-body">
            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/214987390&amp;color=0066cc&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" width="100%" height="450" frameborder="no" scrolling="no" style="max-width: 100%;"></iframe>
          </div>
        </div>
      </div>
      <div class="card bg-inverse">
-       <a class="collapsed" data-toggle="collapse" href="#announcementsTab" aria-expanded="true" aria-controls="collapseTwo">
+       <a class="collapsed" data-toggle="collapse" href="#announcementsTab" aria-expanded="true" aria-controls="announcementsTab">
          <div class="card-header bg-inverse" role="tab" id="announcementsHeading">
            <h5 class="mb-0">
              Announcements
@@ -40,7 +40,7 @@
          </div>
        </a>
  
-       <div id="announcementsTab" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+       <div id="announcementsTab" class="collapse" role="tabpanel" aria-labelledby="announcementsHeading" data-parent="#accordion">
          <div class="card-body">
            <% announcements.forEach(function(announcement){ %>
              <% if (announcement.isPublished) { %>
@@ -64,14 +64,14 @@
        </div>
      </div>
      <div class="card bg-inverse">
-       <a class="collapsed" data-toggle="collapse" href="#groupsTab" aria-expanded="true" aria-controls="collapseThree">
+       <a class="collapsed" data-toggle="collapse" href="#groupsTab" aria-expanded="true" aria-controls="groupsTab">
          <div class="card-header bg-inverse" role="tab" id="groupsHeading">
            <h5 class="mb-0">
              Small Groups
            </h5>
          </div>
        </a>
-       <div id="groupsTab" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+       <div id="groupsTab" class="collapse" role="tabpanel" aria-labelledby="groupsHeading" data-parent="#accordion">
          <div class="card-body">
           <% groups.forEach(function(group){ %>
             <% if (group.isPublished) { %>
@@ -95,28 +95,32 @@
        </div>
      </div>
      <div class="card bg-inverse">
-       <a class="collapsed" data-toggle="collapse" href="#connectTab" aria-expanded="true" aria-controls="collapseFour">
+       <a class="collapsed" data-toggle="collapse" href="#connectTab" aria-expanded="true" aria-controls="connectTab">
          <div class="card-header bg-inverse" role="tab" id="connectHeading">
            <h5 class="mb-0">
              Connect With Us
            </h5>
          </div>
        </a>
-       <div id="connectTab" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+       <div id="connectTab" class="collapse" role="tabpanel" aria-labelledby="connectHeading" data-parent="#accordion">
          <div class="card-body">
            <p>We love hearing from our guests!</p>
  
-             <form>
+             <form action='https://mailthis.to/tim.graves@timgraves.info' method='POST' enctype="multipart/form-data">
                <div class="form-group">
-                 <input class="form-control" type="text" name="name" placeholder="Name">
+                 <input class="form-control" type="text" name="name" placeholder="Your name">
                </div>
                <div class="form-group">
-                 <input class="form-control" type="email" name="email" placeholder="Email">
+                 <input class="form-control" type="email" name="_replyto" placeholder="Your email">
                </div>
                <div class="form-group">
-                 <input class="form-control" type="tel" name="phone" placeholder="Phone">
+                 <input class="form-control" type="tel" name="phone" placeholder="Your phone number (optional)">
                </div>
-               <textarea class="form-control" name="content" placeholder="Message"></textarea>
+               <textarea class="form-control" name="message" placeholder="Type your message for us here!"></textarea>
+               <input type="hidden" name="_subject" value="Contact form submitted">
+               <input type="hidden" name="_after" value="https://fcc-announce.herokuapp.com/">
+               <input type="hidden" name="_honeypot" value="">
+               <input type="hidden" name="_confirmation" value="Thanks for your time, you should hear back from us soon!">
                <button class="btn btn-lg btn-primary pull-right" type="submit">Send</button>
              </form>
          </div>
