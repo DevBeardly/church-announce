@@ -17,30 +17,30 @@
  <div class="container">
    <div id="accordion" role="tablist">
      <div class="card bg-inverse">
-       <a id="collapseOneLink" class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-         <div class="card-header bg-inverse" role="tab" id="headingOne">
+       <a class="collapsed" data-toggle="collapse" href="#sermonsTab" aria-expanded="true" aria-controls="collapseOne">
+         <div class="card-header bg-inverse" role="tab" id="sermonsHeading">
            <h5 class="mb-0">
              Latest Messages
            </h5>
          </div>
        </a>
  
-       <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+       <div id="sermonsTab" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
          <div class="card-body">
            <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/214987390&amp;color=0066cc&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false" width="100%" height="450" frameborder="no" scrolling="no" style="max-width: 100%;"></iframe>
          </div>
        </div>
      </div>
      <div class="card bg-inverse">
-       <a id="collapseTwoLink" class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-         <div class="card-header bg-inverse" role="tab" id="headingTwo">
+       <a class="collapsed" data-toggle="collapse" href="#announcementsTab" aria-expanded="true" aria-controls="collapseTwo">
+         <div class="card-header bg-inverse" role="tab" id="announcementsHeading">
            <h5 class="mb-0">
              Announcements
            </h5>
          </div>
        </a>
  
-       <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+       <div id="announcementsTab" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
          <div class="card-body">
            <% announcements.forEach(function(announcement){ %>
              <% if (announcement.isPublished) { %>
@@ -64,14 +64,14 @@
        </div>
      </div>
      <div class="card bg-inverse">
-       <a id="collapseThreeLink" class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-         <div class="card-header bg-inverse" role="tab" id="headingThree">
+       <a class="collapsed" data-toggle="collapse" href="#groupsTab" aria-expanded="true" aria-controls="collapseThree">
+         <div class="card-header bg-inverse" role="tab" id="groupsHeading">
            <h5 class="mb-0">
              Small Groups
            </h5>
          </div>
        </a>
-       <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+       <div id="groupsTab" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
          <div class="card-body">
           <% groups.forEach(function(group){ %>
             <% if (group.isPublished) { %>
@@ -95,14 +95,14 @@
        </div>
      </div>
      <div class="card bg-inverse">
-       <a id="collapseFourLink" class="collapsed" data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-         <div class="card-header bg-inverse" role="tab" id="headingFour">
+       <a class="collapsed" data-toggle="collapse" href="#connectTab" aria-expanded="true" aria-controls="collapseFour">
+         <div class="card-header bg-inverse" role="tab" id="connectHeading">
            <h5 class="mb-0">
              Connect With Us
            </h5>
          </div>
        </a>
-       <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+       <div id="connectTab" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
          <div class="card-body">
            <p>We love hearing from our guests!</p>
  

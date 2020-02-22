@@ -27,19 +27,19 @@
    border-radius: 0 !important;
    border-bottom: 4px solid;
  }
- #headingOne {
+ #sermonsHeading {
    background-color: #0091c9 !important;
    border-color: #0077a5 !important;
  }
- #headingTwo {
+ #announcementsHeading {
   background-color: #eb0045 !important;
   border-color: #d2003e !important;
  }
- #headingThree {
+ #groupsHeading {
   background-color: #3cb29c !important;
   border-color: #369f8b !important;
  }
- #headingFour {
+ #connectHeading {
   background-color: #805475 !important;
    border-color: #6a4661 !important;
 }
